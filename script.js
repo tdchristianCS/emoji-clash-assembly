@@ -24,7 +24,6 @@ explosion = '<img id="explosion" src= "./assets/images/explode.gif"></img>';
 var twoplayer = false;
 var fought = false;
 
-
 function display() {
     for (emo in emoji_points) {
         // source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
@@ -36,7 +35,7 @@ function display() {
     updateControlStates();
 }
 
-function reset() {
+function restart() {
     fought = false;
     if (!twoplayer) {
         let randomint = Math.floor(Math.random() * emoji_names.length);
@@ -55,13 +54,11 @@ function reset() {
     $(".player_box").text("❎");
     $(".player_box_label").text("Choose 1/17 Emoji");
 
-
     // sources: https://www.youtube.com/watch?v=KjIur9ABjeg&ab_channel=DavidAnuson
     // https://www.youtube.com/watch?v=gTPf7WN0Bnw&t=3s&ab_channel=QuickProgrammingTips
 
     updateControlStates();
 }
-
 
 function comp_player() {
     if (twoplayer) {
@@ -88,7 +85,6 @@ const choose_player = (e) => {
     player_points = emoji_points[chosen_player][1];
     updateControlStates();
 }
-
 
 const choose_computer = (e) => {
     if (twoplayer) {
@@ -150,13 +146,20 @@ function updateControlStates() {
         $('.comp_well').addClass('well_disabled');
     }
 }
+function bind() {
+    $('.player_well').click(choose_player);
+    $('.comp_well').click(choose_computer);
+    $('#restart_button').click(restart);
+    $('#fight_button').click(fight);
+    $('#twoplayer_button').click(comp_player)
+    $('#showAbout').click(showAbout);
+    $('#showGame').click(showGame);
+}
 
-display();
-reset();
-$('.player_well').click(choose_player);
-$('.comp_well').click(choose_computer);
-$('#comp_button').click(reset);
-$('#fight_button').click(fight);
-$('#twoplayer_button').click(comp_player)
-$('#showAbout').click(showAbout);
-$('#showGame').click(showGame);
+function init() {
+    display();
+    bind();
+    restart();
+}
+
+$(document).ready(init);
