@@ -19,7 +19,7 @@ emoji_points["Gym"] = ["🏋️‍♀️", 17];
 
 emoji_names = ["Smile", "Cry", "Angry", "Laugh", "Money", "Devil", "Angel", "Love", "Dog", "Cat", "Cool", "Nerd", "Profanity", "Ghost", "Turd", "Family", "Gym"];
 
-explosion = '<img id="explosion" src= "https://media.tenor.com/nANqORN7qhQAAAAM/explosion-explode.gif"></img>';
+explosion = '<img id="explosion" src= "./assets/images/explode.gif"></img>';
 
 var twoplayer = false;
 var fought = false;
