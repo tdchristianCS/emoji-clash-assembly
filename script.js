@@ -141,7 +141,7 @@ function bothEmojisChosen() {
 }
 
 function updateControlStates() {
-    $('.fight_button').prop('disabled', (fought) || (!bothEmojisChosen()));
+    $('#fight_button').prop('disabled', (fought) || (!bothEmojisChosen()));
     $('.comp_well .emojiPicker').prop('disabled', !twoplayer);
 
     if (twoplayer) {
