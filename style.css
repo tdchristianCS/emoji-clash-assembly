@@ -1,0 +1,221 @@
+body {
+    background: rgba(20, 150, 200);
+    color: white;
+    --clr-button: red;
+/*https://www.youtube.com/watch?v=OMzuo7MOS2I  */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.mainWrap {
+    flex-grow: 1;
+}
+
+.screenButtonWrap {
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    width: 100% !important;
+}
+
+.title {
+    border: 5px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 100px;
+    width: 100% !important;
+}
+
+
+.fightbox {
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-around;
+    width: 100% !important;
+}
+
+
+.comp_box, .player_box {
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    min-width: 500px !important;
+    max-width: 500px !important;
+    height: 500px;
+    background-color: #cbc5c5;
+    color: black;
+    font-size: 400px;
+    line-height: 500px;
+    
+    text-align: center;
+    margin: 20px 10px;
+    
+    border-style:solid;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 5px;
+}
+
+.comp_box img, .player_box img {
+    width: 100%;
+    height: 100%;
+}
+
+#vsimage, .vsimagespacer {
+    align-self: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+.comp_well, .player_well {
+    overflow-y: scroll;
+    /* source: https://developer.mozilla.org/en-US/docs/Web/CSS/overflow */
+    min-width: 110px !important;
+    max-width: 110px !important;
+    height: 500px;
+    background-color: #cbc5c5;
+    margin: 20px 10px;
+
+    border-style:solid;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.emojiPicker {
+    color: black;
+    font-size: 75px;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.label {
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-around;
+    width: 100% !important;
+}
+
+.comp_box_label, .player_box_label {
+    min-width: 500px !important;
+    max: 500px !important;
+    height: 50px;
+    background-color: #cbc5c5;
+    color: black;
+    text-align: center;
+    font-size: 35px;
+    
+    margin: 20px 10px;
+
+    border-style:solid;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 5px;
+}
+
+.controlButton {
+    min-width: 110px !important;
+    max-width: 110px !important;
+    height: 50px;
+    background-color: #cbc5c5;
+
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+
+    margin: 20px 10px;
+
+    border-style:solid;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 5px;
+}
+
+.controlButton:not(:disabled) {
+    cursor: pointer;
+}
+
+.controlButton:not(:disabled):hover {
+    filter: brightness(1.1);
+}
+
+.controlButton:not(:disabled):active {
+    filter: brightness(0.8);
+}
+
+.controlButton:disabled {
+    filter: brightness(0.5);
+}
+
+.twoplayer_button {
+    background-color: var(--clr-button);
+    font-size: 24px;
+
+}
+
+.emojiPicker:not(:disabled) {
+    cursor: pointer;
+}
+
+.emojiPicker:not(:disabled):hover {
+    filter: brightness(1.1);
+}
+
+.emojiPicker:not(:disabled):active {
+    filter: brightness(0.8);
+}
+
+.emojiPicker:disabled {
+    filter: brightness(0.5);
+}
+
+#about {
+    text-align: center;
+}
+
+#about h1 {
+    margin-bottom: 40px;
+}
+
+#about p {
+    margin-bottom: 25px;
+    font-size: 35px;
+    padding: 0 80px;
+}
+
+/* Scrollbar */
+
+.hideScrollbar {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+.hideScrollbar::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}

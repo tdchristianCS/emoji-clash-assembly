@@ -1,0 +1,58 @@
+<html>
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+
+    <title>Emoji Clash</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="screen" id="game">
+    <div class="mainWrap">
+    <div class="title">
+        <h1>Emoji Clash</h1>
+        <p>Welcome!</p>
+        <button class="controlButton twoplayer_button">2-Player</button>
+    </div>
+
+    <div class="label">
+        <button class="controlButton comp_button">Restart</button>
+        <div class="comp_box_label"></div>
+        <div class="vsimagespacer"></div>
+        <div class="player_box_label">Choose 1/17 Emoji</div>
+        <button class="controlButton fight_button" disabled="disabled">Fight</button>
+    </div>
+
+    <div class="fightbox">
+        <div class="comp_well hideScrollbar"></div>
+        <div class="comp_box"></div>
+        <img id='vsimage' src="./assets/images/vs.jpg">
+        <div class="player_box"></div>
+        <div class="player_well hideScrollbar"></div>
+    </div>
+    </div>
+    <div class="screenButtonWrap">
+        <button class="controlButton screenButton" id="showAbout">About</button>
+    </div>
+</div>
+<div class="screen hide" id="about">
+
+    <div class="mainWrap">
+    <h1>Welcome to Emoji Clash!</h1>
+        <p>Emoji Clash is a simple, fun game by Michael Mankaruos where the user chooses one of 17 emojis to
+        battle the computer. Simply scroll through the right emoji well to browse and select your emoji, then click
+        fight, and see if you chose right. When your ready to go again, click restart and have fun!</p>
+        <p>You can also switch to 2-Player mode to control the emoji on the left as well.</p>
+</div>
+    <div class="screenButtonWrap">
+        <button class="controlButton screenButton" id="showGame">Game</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
