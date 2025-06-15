@@ -65,13 +65,13 @@ function comp_player() {
         $("#twoplayer_button").text("Switch to 2-Player");
         $('body').css('--clr-button', 'red');
         twoplayer = false;
-        reset();
+        restart();
 
     } else {
         $("#twoplayer_button").text("Switch to Computer");
         $('body').css('--clr-button', 'green');
         twoplayer = true;
-        reset();
+        restart();
     }
     updateControlStates();
 }
