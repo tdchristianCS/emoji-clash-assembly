@@ -35,7 +35,6 @@ function display() {
     }
 
 function reset() {
-    console.log("yes")
     if (!twoplayer) {
         let randomint = Math.floor(Math.random() * emoji_names.length);
         // source: https://www.youtube.com/watch?v=K2upGO5Bb48&t=78s&ab_channel=BroCode
@@ -47,7 +46,6 @@ function reset() {
     }   
 
     else {
-        console.log("help");
         $(".comp_box_label").text("Choose 1/17 Emoji");
         $(".comp_box").text("❎");
     }
@@ -91,6 +89,7 @@ const choose_computer = (e) => {
     if (twoplayer) {
         computer = e.target.id;
         let emoji = emoji_points[computer][0];
+        comp_points = emoji_points[computer][1];
         $(".comp_box").text(emoji);
         $(".comp_box_label").text(computer);
 
@@ -101,6 +100,7 @@ const choose_computer = (e) => {
 
 
 function fight() {
+    console.log(comp_points, player_points)
     if (($(".comp_box").text() != ("❎")) && ($(".player_box").text() != ("❎"))) {
         if (comp_points > player_points) {
             console.log("comp wins")
