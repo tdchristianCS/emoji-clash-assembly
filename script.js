@@ -83,6 +83,9 @@ const choose_player = (e) => {
     $(".player_box_label").text(chosen_player);
 
     player_points = emoji_points[chosen_player][1];
+
+    // change in emoji = reset fight state
+    fought = false;
     updateControlStates();
 }
 
