@@ -65,13 +65,13 @@ function reset() {
 
 function comp_player() {
     if (twoplayer) {
-        $(".twoplayer_button").text("2-Player");
+        $("#twoplayer_button").text("Switch to 2-Player");
         $('body').css('--clr-button', 'red');
         twoplayer = false;
         reset();
 
     } else {
-        $(".twoplayer_button").text("Computer");
+        $("#twoplayer_button").text("Switch to Computer");
         $('body').css('--clr-button', 'green');
         twoplayer = true;
         reset();
@@ -143,14 +143,20 @@ function bothEmojisChosen() {
 function updateControlStates() {
     $('.fight_button').prop('disabled', (fought) || (!bothEmojisChosen()));
     $('.comp_well .emojiPicker').prop('disabled', !twoplayer);
+
+    if (twoplayer) {
+        $('.comp_well').removeClass('well_disabled');
+    } else {
+        $('.comp_well').addClass('well_disabled');
+    }
 }
 
 display();
 reset();
 $('.player_well').click(choose_player);
 $('.comp_well').click(choose_computer);
-$('.comp_button').click(reset);
-$('.fight_button').click(fight);
-$('.twoplayer_button').click(comp_player)
+$('#comp_button').click(reset);
+$('#fight_button').click(fight);
+$('#twoplayer_button').click(comp_player)
 $('#showAbout').click(showAbout);
 $('#showGame').click(showGame);
